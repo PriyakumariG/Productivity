@@ -33,15 +33,41 @@ A modern productivity suite combining essential tools like a calculator, to-do l
 
 ### 🏠 Home Page
 
-![Home](screenshots/home.png)
+![Home](Images/Home.png)
 
 ### ✅ To-do List
 
-![To-do](screenshots/todo.png)
+![To-do](Images/ToDo.png)
 
-### ⏱️ Pomodoro
+### 📋 Register Page
 
-![Pomodoro](screenshots/pomodoro.png)
+![Register Page](Images/Reguster.png)
+
+---
+
+### ✅ Task Manager
+
+![Task Manager](Images/Task.png)
+
+---
+
+### 🎮 Game Page
+
+![Game Page](Images/game.png)
+
+---
+
+### 🎵 Music Player
+
+![Music Player](Images/music.png)
+
+---
+
+### ⏱️ Pomodoro Timer
+
+![Pomodoro Timer](Images/Pomodoro.png)
+
+---
 
 
 ## 📂 Folder Structure
