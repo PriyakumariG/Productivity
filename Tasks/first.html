@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            First page
+        </title>
+       <style>
+    *{
+            background-color: rgb(100, 184, 184);
+        }
+        .header{
+            position:absolute;
+            text-align: center;
+            top: 20%;
+            left:50%;
+            transform: translate(-50%,-30%);
+            
+        }
+       
+      .container
+      {
+       display:block ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      .container a{
+      text-align: center;
+      padding: 7px;
+      width: calc(100% / 3);
+      display: inline-block;
+      border: 3px solid #0ff;
+      border-radius: 100px;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      margin: 10px;
+      color: aliceblue;
+      }
+      
+      .container a:hover{
+      background: #0ff;
+            color: #000;
+            box-shadow: 0 0 50px rgb(151, 97, 238),0 0 21px #0ff;
+      }
+
+      @media screen and (max-width: 980px){
+        .header{
+            position:absolute;
+            text-align: center;
+            top: 15%;
+            left:40%;
+            transform: translate(-30%,-20%);
+            font-size: 35px;
+        }   
+        .container{
+              display: -webkit-inline-flex;
+              flex-wrap: wrap;
+              top: 30%;
+        left: 30%;
+        transform: translate(-30%,-30%);
+            }
+            .container a{
+              text-align: center;
+              border-radius:200px;
+              padding: 10px;
+              width: calc(100% / 4);
+              display: inline-block;
+              border: 6px solid #0ff;
+             padding: 46px 48px;
+             margin: 30px 20px 30px 40px;
+             font-size: 32px;
+            }
+            .container a:hover{
+      background: #0ff;
+            color: #000;
+            box-shadow: 0 0 50px rgb(151, 97, 238),0 0 21px #0ff;
+      }
+            
+      }
+       </style> 
+    </head>
+    <body>
+       <div class="header">
+        <h1>Choose The Task</h1>
+        </div> 
+        <div class="container">
+          <!-- <div class="row1"> -->
+            <a href="pomodoro/index.html">
+              POMODORO
+          </a>     
+        <a  href="Calculator/cal.html">
+      CALCULATOR
+        </a>
+      </a>
+      <a href="Game/index.html">GAME 
+        </a>
+      
+      <!-- <div class="row2"> -->
+        <a  href="To do/Todo.html">
+          TO-DO-LIST
+        </a>
+            <a href="Music/index.html">
+            MUSIC PLAYER   
+              </a>
+              <a href="Notes/Note.html">
+                NOTES
+                    </a>
+                <!-- </div> -->
+                </div>
+    </body>
+</html>

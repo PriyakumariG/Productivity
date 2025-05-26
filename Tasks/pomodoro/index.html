@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://kit.fontawesome.com/a68aec768e.js" crossorigin="anonymous"></script>
+    <style>#menu{
+      position: fixed;
+      right: 50px;
+      top: 10px;
+      font-size: 40px;
+      color: black;
+      cursor: pointer;
+      z-index: 2;
+    }
+    #side{
+    padding: 100px 0px;
+    position: fixed;
+    width: 0px;
+    height: 100vh;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    box-shadow:inset 10px 10px 10px grey;
+    top: 0;
+    right:0;
+    }
+    #side ul li{
+    list-style: none;
+    }
+    #side ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin:10px 30px;
+    display: block;
+    padding: 10px;
+    
+    }
+    #side ul li a:hover{
+    background: rgba(255,255,255,0.4);
+    transition: 0.4s;
+    }</style>
+</head>
+<body>
+  <header><i class="fa-solid fa-bars" id="menu"></i>
+    <section id="side">
+      <ul>
+        <li><a href="../To do/Todo.html">To do </a></li>
+        <li><a href="../Notes/Note.html">Notes</a></li>
+        <li><a href="../Calculator/cal.html">Calculator </a></li>
+        <li><a href="../Music/index.html">music </a></li>
+        <li><a href="../Game/index.html">game </a></li>
+      </ul>
+    </section></header>
+    <script>
+      var menu=document.getElementById("menu");
+      var side= document.getElementById("side");
+      side.style.width="0px";
+
+      menu.onclick =function(){
+        if(side.style.width=="0px"){
+          side.style.width="250px";
+        }
+        else{
+          side.style.width="0px";
+        }
+      }
+    </script>
+ <h1 style="color: rgb(246, 240, 240);">Pomodoro ⏲ Timer</h1>
+
+  <audio id="alarm" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" preload="auto"></audio>
+
+  <div class="clock">
+    <div class="mins">0</div>
+    <div>:</div>
+    <div class="secs">00</div>
+    <svg class="progress-ring" height="120" width="120">
+      <circle class="progress-ring__circle" stroke="black" stroke-width="8" fill="transparent" r="50" cx="60" cy="60" />
+    </svg>
+  </div>
+
+  <div class="btn-group">
+    <button class="start">Start Focus</button>
+    <button class="pause">Pause</button>
+    <button class="reset">Reset</button>
+  </div>
+
+  <form>
+    <label><h2> Focus Time (min): </h2>
+      <input id="focusTime" type="number" value="1" min="1"></label>
+    <label> <h2>Break Time (min):</h2>
+      <input id="breakTime" type="number" value="1" min="1"></label>
+    <button type="submit">Save</button>
+  </form>
+
+  <script src="progress.js"></script>
+  <script src="settings.js"></script>
+  <script src="timer.js"></script>
+</body>
+</html>

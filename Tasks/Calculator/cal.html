@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>MyCalculator</title>
+        <link rel="stylesheet" href="custom.css"/>
+        <script src="https://kit.fontawesome.com/a68aec768e.js" crossorigin="anonymous"></script>
+        <style>
+            #menu{
+          position: fixed;
+          right: 50px;
+          top: 10px;
+          font-size: 40px;
+          color: white;
+          cursor: pointer;
+          z-index: 2;
+        }
+        #side{
+        padding: 100px 0px;
+        position: fixed;
+        width: 0px;
+        height: 100vh;
+        background:rgba(255,255,255,0.2);
+        backdrop-filter:blur(10px);
+        box-shadow:inset 10px 10px 10px grey;
+        top: 0;
+        right:0;
+        }
+        #side ul li{
+        list-style: none;
+        }
+        #side ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        margin:10px 30px;
+        display: block;
+        padding: 10px;
+        
+        }
+        #side ul li a:hover{
+        background: rgba(255,255,255,0.4);
+        transition: 0.4s;
+        }
+          </style>
+    </head>
+    <body>
+        <header><i class="fas fa-bars" id="menu"></i>
+            <section id="side">
+              <ul>
+                <li><a href="../To do/Todo.html">To do </a></li>
+                <li><a href="../Notes/Note.html">Notes </a></li>
+                <li><a href="../pomodoro/index.html">Pomodoro</a></li>
+                <li><a href="../Music/index.html">music </a></li>
+                <li><a href="../Game/index.html">game </a></li>
+              </ul>
+            </section></header>
+            <script>
+              var menu=document.getElementById("menu");
+              var side= document.getElementById("side");
+              side.style.width="0px";
+        
+              menu.onclick =function(){
+                if(side.style.width=="0px"){
+                  side.style.width="250px";
+                }
+                else{
+                  side.style.width="0px";
+                }
+              }
+            </script>
+
+        <div id="container">
+            <div id="display">0</div>
+            <div id="miniDisplay">&nbsp;</div>
+            <button class="fn" onclick="input('&Sqrt;(','Math.sqrt(')">&Sqrt;</button>
+            <button class="fn" onclick="input('&sup2;','**2')">x&sup2;</button>
+            <button class="fn" onclick="input('sin(','Math.sin(Math.PI/180*')">sin</button>
+            <button class="fn" onclick="input('cos(','Math.cos(Math.PI/180*')">cos</button>
+            <button class="fn" onclick="input('tan(','Math.tan(Math.PI/180*')">tan</button>
+            <button id="backsps" onclick="backspace()">AC</button>
+            <button onclick="input('(')">(</button>
+            <button onclick="input(')')">)</button>
+            <button onclick="input('+')">+</button>
+            <button onclick="input('7')">7</button>
+            <button onclick="input('8')">8</button>
+            <button onclick="input('9')">9</button>
+            <button onclick="input('-')">-</button>
+            <button onclick="input('4')">4</button>
+            <button onclick="input('5')">5</button>
+            <button onclick="input('6')">6</button>
+            <button onclick="input('&times;','*')">&times;</button>
+            <button onclick="input('1')">1</button>
+            <button onclick="input('2')">2</button>
+            <button onclick="input('3')">3</button>
+            <button onclick="input('&div;','/')">&div;</button>
+            <button onclick="input('0')">0</button>
+            <button onclick="input('.')">.</button>
+            <button onclick="input('%','/100')">%</button>
+            <button id="equal" onclick="getAns()">=</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

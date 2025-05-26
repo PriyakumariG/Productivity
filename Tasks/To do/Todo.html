@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Todo List App in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Iconscout Link For Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://kit.fontawesome.com/a68aec768e.js" crossorigin="anonymous"></script>
+    <style>#nav{
+      position: fixed;
+      right: 50px;
+      top: 10px;
+      font-size: 40px;
+      color: black;
+      cursor: pointer;
+      z-index: 2;
+    }
+    #side{
+    padding: 100px 0px;
+    position: fixed;
+    width: 0px;
+    height: 100vh;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    box-shadow:inset 10px 10px 10px grey;
+    top: 0;
+    right:0;
+    }
+    #side ul li{
+    list-style: none;
+    }
+    #side ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin:10px 30px;
+    display: block;
+    padding: 10px;
+    
+    }
+    #side ul li a:hover{
+    background: rgba(255,255,255,0.4);
+    transition: 0.4s;
+    }</style>
+  </head>
+  <body>
+    <body>
+      <div><i class="fa-solid fa-bars" id="nav"></i>
+        <section id="side">
+          <ul>
+            <li><a href="../pomodoro/index.html">Pomodoro </a></li>
+            <li><a href="../Notes/Note.html">Notes </a></li>
+            <li><a href="../Calculator/cal.html">Calculator </a></li>
+            <li><a href="../Music/index.html">music </a></li>
+            <li><a href="../Game/index.html">game </a></li>
+          </ul>
+        </section></div>
+        <script>
+          var menu=document.getElementById("nav");
+          var side= document.getElementById("side");
+          side.style.width="0px";
+    
+          menu.onclick =function(){
+            if(side.style.width=="0px"){
+              side.style.width="250px";
+            }
+            else{
+              side.style.width="0px";
+            }
+          }
+        </script>
+    <div class="wrapper">
+      <div class="task-input">
+        <img src="bars-icon.svg" alt="icon">
+        <input type="text" placeholder="Add a new task">
+      </div>
+      <div class="controls">
+        <div class="filters">
+          <span class="active" id="all">All</span>
+          <span id="pending">Pending</span>
+          <span id="completed">Completed</span>
+        </div>
+        <button class="clear-btn">Clear All</button>
+      </div>
+      <ul class="task-box"></ul>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>

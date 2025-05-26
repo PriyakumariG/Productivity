@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+   
+   <script src="https://kit.fontawesome.com/a68aec768e.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <style>#menu{
+      position: fixed;
+      right: 50px;
+      top: 10px;
+      font-size: 40px;
+      color: black;
+      cursor: pointer;
+      z-index: 2;
+    }
+    #side{
+    padding: 100px 0px;
+    position: fixed;
+    width: 0px;
+    height: 100vh;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    box-shadow:inset 10px 10px 10px grey;
+    top: 0;
+    right:0;
+    }
+    #side ul li{
+    list-style: none;
+    }
+    #side ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin:10px 30px;
+    display: block;
+    padding: 10px;
+    
+    }
+    #side ul li a:hover{
+    background: rgba(255,255,255,0.4);
+    transition: 0.4s;
+    }</style>
+    
+    <div class="wrapper">
+      <div class="stats-container">
+        <div id="moves-count"></div>
+        <div id="time"></div>
+      </div>
+      <div class="game-container"></div>
+      <button id="stop" class="hide">Stop Game</button>
+    </div>
+    <div class="controls-container">
+      <header><i class="fas fa-bars" id="menu"></i>
+        <section id="side">
+          <ul>
+            <li><a href="../To do/Todo.html">To do </a></li>
+            <li><a href="../Notes/Note.html">Notes </a></li>
+            <li><a href="../Calculator/cal.html">Calculator </a></li>
+            <li><a href="../Music/index.html">music </a></li>
+            <li><a href="../pomodoro/index.html">Pomodoro </a></li>
+          </ul>
+        </section></header>
+        <script>
+          var menu=document.getElementById("menu");
+          var side= document.getElementById("side");
+          side.style.width="0px";
+    
+          menu.onclick =function(){
+            if(side.style.width=="0px"){
+              side.style.width="250px";
+            }
+            else{
+              side.style.width="0px";
+            }
+          }
+        </script>
+      <p id="result"></p>
+      <button id="start">Start Game</button>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
