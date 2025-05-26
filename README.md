@@ -1,46 +1,45 @@
-# 📈 Productivity Web App
+# Productivity Web App 🚀
 
-[![Website](https://img.shields.io/website?url=http%3A%2F%2Fproductivity.wuaze.com)](http://productivity.wuaze.com)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](#license)
+A modern productivity suite combining essential tools like a calculator, to-do list, notes, pomodoro timer, music player, and games — all in one responsive web application. Designed to help users manage time and tasks efficiently.
 
-A web-based productivity app that helps users track their tasks, goals, and progress efficiently. Deployed and live at:  
-👉 **[http://productivity.wuaze.com](http://productivity.wuaze.com)**
+🔗 **Live Demo:** [productivity.wuaze.com](http://productivity.wuaze.com)
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- ✅ Task creation and management
-- 🕒 Daily, weekly, and monthly planners
-- 📊 Productivity analytics & stats
-- 🌙 Light/Dark mode
-- 📱 Responsive UI (Mobile friendly)
-
----
-
-## 📸 Screenshots
-
-> Add your screenshots in a folder called `screenshots` and update the paths below accordingly.
-
-| Dashboard | Task List |
-|-----------|-----------|
-| ![Dashboard](screenshots/dashboard.png) | ![Task List](screenshots/tasks.png) |
+- ✅ **Login & Register System** (PHP)
+- 📝 **To-Do List** — Add, remove, and track tasks
+- 🗒️ **Notes** — Save personal notes
+- ⏱️ **Pomodoro Timer** — Focus with 25/5-minute sessions
+- 🎧 **Music Player** — Listen to lo-fi while working
+- ➗ **Calculator** — Scientific functions included
+- 🎮 **Mini Games** — Short breaks with fun
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript (Vanilla or Framework used?)
-- **Backend:** (if any)
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** PHP
+- **Database:** MySQL (for login/notes/todo)
 - **Hosting:** [InfinityFree](https://infinityfree.net/)
 
 ---
 
-## 🧰 Getting Started
-
-To run this project locally:
+## 📂 Folder Structure
 
 ```bash
-git clone https://github.com/yourusername/productivity-app.git
-cd productivity-app
-# open index.html in your browser or run with Live Server
+Productivity-Web-App/
+│
+├── login/             # Login and Register pages
+├── home/              # Main dashboard after login
+├── todo/              # To-do list module
+├── notes/             # Notes module
+├── pomodoro/          # Pomodoro timer
+├── music/             # Music player
+├── calculator/        # Scientific calculator
+├── game/              # Fun games
+├── assets/            # Images, icons, CSS, JS
+├── db/                # Database connection files
+└── index.html         # Main entry point or redirect
